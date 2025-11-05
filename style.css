@@ -1,0 +1,550 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+html { 
+  scroll-behavior: smooth; 
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: rgb(0,0,33);
+  color: #fff;
+  line-height: 1.5;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  height: 80px;
+  background: rgb(18,18,62);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.brand { 
+  font-size: 1.2rem; 
+  font-weight: 600; 
+}
+nav ul { 
+  display: flex; 
+  gap: 20px; 
+  align-items: center; 
+  list-style: none; 
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 10px;
+  transition: color .18s, transform .18s;
+}
+nav a:hover { 
+  color: rgb(153,153,224); 
+  transform: translateY(-1px); 
+}
+.hero {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 90px 40px;
+  min-height: 60vh;
+}
+.hero-left { 
+  width: 45%; 
+}
+.hero-left h1 { 
+  font-size: 2.4rem; 
+  margin-bottom: 10px; 
+}
+.purple { 
+  color: rgb(170,107,228); 
+}
+.hero-left .sub { 
+  margin: 10px 0 20px; 
+  font-size: 1rem; 
+  color: #cfcfe8; 
+}
+.buttons { 
+  margin-top: 18px; 
+}
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  margin-right: 12px;
+  border-radius: 8px;
+  background: #1e2167;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .18s, background .18s;
+}
+.btn:hover { 
+  transform: translateY(-2px); 
+  background: rgb(153,153,224); 
+  color: #000; 
+}
+.hero-right img { 
+  width: 360px; 
+  max-width: 90%; 
+  border-radius: 8px; 
+}
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 22px;
+}
+.section h2 { 
+  font-size: 1.6rem; 
+  color: #fff; 
+  margin-bottom: 12px; 
+}
+.muted { 
+    color: #9a99b9; 
+    font-size: 0.95rem; 
+}
+hr.sep {
+  border: 0; 
+  height: 1.5px; 
+  background: #9c97f1; 
+  margin: 40px auto;
+  max-width: 90%;
+  opacity: 0.8;
+}
+.timeline {
+  position: relative;
+  margin: 60px auto;
+  padding: 120px 24px 120px;
+  max-width: 1000px;
+  display: block;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 50%;
+  height: 4px;
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+.timeline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+.item {
+  position: relative;
+  width: calc((100% - 10%) / 6); 
+  min-width: 140px;
+  text-align: center;
+  padding: 0 6px;
+}
+.item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  background: rgb(170,107,228);
+  border: 3px solid #0c0c25;
+  border-radius: 50%;
+  z-index: 6;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+.item.top .card {
+  position: absolute;
+  bottom: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+}
+  .item.bottom .card {
+    position: absolute;
+    top: calc(100% + 32px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    z-index: 10;
+  }
+  .card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #dcdcec;
+    backdrop-filter: blur(6px);
+    transition: transform .18s, background .18s;
+    text-align: left;
+  }
+  .card h3 { 
+      color: rgb(170,107,228); 
+      font-size: 1rem; 
+      margin-bottom: 6px; 
+  }
+  .card p { 
+      font-size: .92rem; 
+      margin: 0; color: #e0e0ea; 
+  }
+.card:hover { 
+  transform: translateY(-6px); 
+  background: rgba(255,255,255,0.12); 
+}
+.achievements-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px 0;
+}
+.achievements-timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: rgba(255,255,255,0.2);
+  top: 0;
+  bottom: 0;      
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.achievement-container {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}   
+.achievement-container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: rgb(170,107,228);
+  border: 3px solid #0c0c25;
+  top: 25px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.left-achievement {
+  left: 0;
+  text-align: right;
+}
+.right-achievement {
+  left: 50%;
+  text-align: left;
+}
+.right-achievement::after {
+  left: -10px;
+}
+.left-achievement::after {
+  right: -10px;
+}
+.achievement-content {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 18px 22px;
+  border-radius: 10px;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+.achievement-content:hover {
+  transform: translateY(-6px);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.achievement-content h3 {
+  color: rgb(170,107,228);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+.achievement-content p {
+  font-size: 0.95rem;
+  color: rgb(220,220,230);
+  line-height: 1.4;
+}
+.left-achievement .achievement-content {
+  text-align: right;
+}
+.right-achievement .achievement-content {
+  text-align: left;
+}
+@media (max-width: 860px) {
+.timeline::before { 
+  left: 6%; 
+  right: 6%;
+}
+.timeline {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.timeline-row { 
+  display: block;
+}
+.item {
+  width: 100%;
+  min-width: auto;
+  margin: 26px 0;
+  padding-left: 54px;
+}
+.item::after {
+  left: 24px; 
+  top: 20px; 
+  transform: none;
+  z-index: 6;
+}
+.item.top .card,
+.item.bottom .card {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  width: calc(100% - 72px);
+  margin-left: 8px;
+}
+.card { 
+  text-align: left;
+}
+}
+@media (max-width: 860px) {
+.achievements-timeline::after {
+  left: 28px !important;
+  transform: none !important;
+  height: 100%;
+}
+.achievement-container {
+  width: 100% !important;
+  left: 0 !important;
+  padding-left: 70px !important;
+  padding-right: 20px !important;
+  margin-bottom: 22px;
+  box-sizing: border-box;
+}
+.achievement-container::after {
+  left: 18px !important;
+  right: auto !important;
+  top: 12px !important;
+}
+.achievement-content {
+  width: calc(100% - 90px) !important;
+  position: relative !important;
+  left: 0 !important;
+  transform: none !important;
+  text-align: left !important;
+}
+.left-achievement .achievement-content,
+.right-achievement .achievement-content {
+  text-align: left !important;
+}
+}
+footer {
+  background: #0e0e2c;
+  padding: 26px 12px;
+  margin-top: 30px;
+}
+.footer-inner { 
+  max-width: 1000px; 
+  margin: 0 auto; 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  gap:16px; 
+  padding: 0 18px; 
+  flex-wrap:wrap; 
+}
+.social a { 
+  color: #fff; 
+  text-decoration: none; 
+  margin-right: 14px; 
+  display:inline-flex; 
+  align-items:center; gap:8px; 
+}
+.social a:hover { 
+  color: rgb(170,107,228); 
+}
+.container {
+  max-width: 1000px;
+  margin: 0px 100px;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 12px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  height: 80px;
+  background: rgba(18, 18, 62, 0.9);
+  position: fixed;
+  top: -80px; /* hides header above viewport */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+body:hover nav {
+  top: 0;
+}
+#projects {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+#projects .timeline {
+  margin-top: 100px;
+}
+#hover-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15px; 
+  z-index: 999;
+}
+#hover-zone:hover + nav {
+  top: 0;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;             
+  padding: 0 20px;            
+  font-size: 1rem;            
+}
+@media (max-width: 860px) {
+  nav {
+    top: 0 !important;        
+    position: fixed;
+    background: rgba(18,18,62,0.95);
+  }
+  #hover-zone { display: none; } 
+}
+
+/* HERO: stack vertically on small screens and scale image */
+@media (max-width: 860px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .hero-left, .hero-right { width: 100%; }
+  .hero-left { order: 1; }
+  .hero-right { order: 2; margin-top: 18px; }
+  .hero-left h1 { font-size: 1.8rem; }
+  .hero-left .sub { font-size: 0.98rem; }
+  .hero-right img { width: 260px; }
+}
+
+/* Projects timeline: switch to vertical stacked layout on narrow screens */
+@media (max-width: 860px) {
+  .timeline {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .timeline::before { /* move center line to left so cards stack normally */
+    left: 28px;
+    right: auto;
+    transform: none;
+    height: calc(100% - 10px);
+  }
+  .timeline-row { display: block; }
+  .item {
+    width: 100%;
+    padding-left: 70px;
+    margin: 22px 0;
+    min-width: 0;
+    text-align: left;
+  }
+  .item::after {
+    left: 24px;
+    top: 0;
+    transform: none;
+  }
+  .item .card {
+    position: relative;
+    top: 10px;
+    left: 0;
+    transform: none;
+    width: calc(100% - 90px);
+    margin-left: 8px;
+  }
+}
+
+/* Achievements: stack vertically and position line left for mobile */
+@media (max-width: 860px) {
+  .achievements-timeline {
+    max-width: 720px;
+    padding: 20px 0 40px;
+  }
+  .achievements-timeline::after {
+    left: 28px;
+    transform: none;
+  }
+  .achievement-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+  .achievement-container::after {
+    left: 18px;
+    right: auto;
+    top: 8px;
+  }
+  .achievement-content { width: calc(100% - 90px); }
+  .left-achievement .achievement-content,
+  .right-achievement .achievement-content {
+    text-align: left;
+  }
+}
+
+/* Tablet tweaks (medium screens) */
+@media (min-width: 861px) and (max-width: 1100px) {
+  .hero-left h1 { font-size: 2rem; }
+  .hero-right img { width: 320px; }
+  .item .card { width: 200px; }
+  .item { min-width: 120px; }
+}
+
+/* Smaller phones adjustments */
+@media (max-width: 420px) {
+  .btn { padding: 9px 12px; font-size: .95rem; }
+  .hero-left h1 { font-size: 1.6rem; }
+  .hero-right img { width: 200px; }
+  .card h3 { font-size: .98rem; }
+  .card p, .achievement-content p { font-size: .9rem; }
+  .achievement-content { padding: 12px 14px; }
+  hr.sep { margin: 28px auto; width: 90%; }
+}
+
+/* Accessibility + touch: make nav links bigger on touch */
+@media (max-width: 860px) {
+  nav ul li a {
+    padding: 12px 14px;
+    font-size: 1rem;
+    display: block;
+  }
+  nav ul { gap: 8px; }
+}
+
+/* optional: reduce heavy backdrop-filter on low-power devices */
+@media (prefers-reduced-motion: reduce) {
+  .card, .achievement-content { transition: none; }
+  nav { transition: none; }
+}
+
+/* cleanup: ensure footer spacing on small screens */
+@media (max-width: 860px) {
+  footer { padding: 20px 12px; }
+  .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+}
