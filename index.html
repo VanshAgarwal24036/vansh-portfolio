@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vansh Agarwal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <script>
+    window.addEventListener('load', () => {
+      if (location.hash) {
+        history.replaceState(null, '', location.pathname + location.search);
+        window.scrollTo(0,0);
+      }
+    });
+  </script>
+
+  <div id="hover-zone"></div>
+
+  <!-- header -->
+  <header id="home">
+    <nav>
+      <div class="brand">Vansh's Portfolio</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main -->
+  <main>
+
+    <!-- about -->
+    <section id ="about" class="hero" style="display:flex; gap:24px; align-items:center; justify-content:space-around; padding:90px 40px;">
+      <div class="hero-left" style="width:45%;">
+        <h1>Hi, I'm <span class="purple">Vansh Agarwal</span></h1>
+        <div class="sub">and I am a passionate <span id="typed-role" class="purple"></span></div>
+        <div class="buttons">
+          <a class="btn" href="vansh.pdf" target="_blank" rel="noopener">Download Resume</a>
+          <a class="btn" href="https://github.com/VanshAgarwal24036" target="_blank" rel="noopener">Visit Github</a>
+        </div>
+      </div>
+      <div class="hero-right" style="width:45%; text-align:center;">
+        <img src="bg.png" alt="Profile Illustration">
+      </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- projects -->
+    <div id="project" class="container">
+        <h2>My Projects</h2>
+        <p class="muted">What I have created so far</p>
+    </div>
+    <section id = "projects" class="section">
+      <div class="timeline" aria-label="Projects timeline">
+        <div class="timeline-row">
+
+          <div class="item top" aria-hidden="false">
+            <div class="card">
+              <h3>🌱 IoT Smart Farming (May 2024)</h3>
+              <p>Built an IoT system using DHT and soil sensors to monitor humidity, temperature, and auto-control a water pump via cloud.</p>
+            </div>
+          </div>
+
+          <div class="item bottom">
+            <div class="card">
+              <h3>🪨 Rock vs Mine ML Model (Nov–Dec 2024)</h3>
+              <p>Developed Logistic Regression model predicting rock or mine from sonar data, improving accuracy and data analysis skills.</p>
+            </div>
+          </div>
+
+          <div class="item top">
+            <div class="card">
+              <h3>🎬 Movie Recommendation System (Apr–May 2025)</h3>
+              <p>Created a movie recommender using cosine similarity and content-based filtering to suggest similar movies dynamically.</p>
+            </div>
+          </div>
+
+          <div class="item bottom">
+            <div class="card">
+              <h3>😷 Face Mask Detection (Sep–Oct 2025)</h3>
+              <p>Designed CNN model detecting masks on faces in real-time with OpenCV and TensorFlow for public safety monitoring.</p>
+            </div>
+          </div>
+
+          <div class="item top">
+            <div class="card">
+              <h3>🛕 Temple Management System (Oct 2025–Present)</h3>
+              <p>Working with team to build end-to-end system integrating Web, AI, and App Dev for digital temple operations.</p>
+            </div>
+          </div>
+
+          <div class="item bottom">
+            <div class="card">
+              <h3>🧠 Deepfake Detection (Nov 2025–Present)</h3>
+              <p>Developing deep learning model detecting manipulated videos using CNN, focusing on AI ethics and digital safety.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- achievements -->
+    <div id="achievements" class="container">
+        <h2>My Achievements</h2>
+        <p class="muted">Some proud moments in my journey</p>
+        <div class="achievements-timeline">
+            <div class="achievement-container left-achievement">
+                <div class="achievement-content">
+                    <h3>🏆 Winner – InnoCodeathon (May 2024)</h3>
+                    <p>Secured 1st position in InnoCodeathon, a hackathon held at ITS Engineering College, for developing an innovative IoT-based solution.</p>
+                </div>
+            </div>
+            <div class="achievement-container right-achievement">
+                <div class="achievement-content">
+                    <h3>🥇 IEEE AICSSYC 2024 (Oct 2024)</h3>
+                    <p>Won 1st prize in the 12th IEEE All India Computer Society Student & Young Professional Congress Ideathon Competition.</p>
+                </div>
+            </div>
+        </div>                                  
+    </div>
+
+    <div id="achievements" class="container">
+        <div class="achievements-timeline">
+            <div class="achievement-container left-achievement">
+                <div class="achievement-content">
+                    <h3>🎖 Technovation Hackathon (Jan 2025)</h3>
+                    <p>Achieved 5th prize in Technovation Hackathon organized by Sharda University for AI-powered development innovation.</p>
+                </div>
+            </div>
+            <div class="achievement-container right-achievement">
+                <div class="achievement-content">
+                    <h3>💡 SIH 2025 Internal Hackathon (Sep 2025)</h3>
+                    <p>Secured a spot in the Top 45 of Smart India Hackathon 2025 internal round, showcasing strong problem-solving and teamwork.</p>
+                </div>
+            </div>
+        </div>                                  
+    </div>
+
+    <div id="achievements" class="container">
+        <div class="achievements-timeline">
+            <div class="achievement-container left-achievement">
+                <div class="achievement-content">
+                    <h3>📄 Research Paper (Present)</h3>
+                    <p>Currently writing a survey paper on the topic “Internet of Sound,” focusing on communication through acoustic signal technology.</p>
+                </div>
+            </div>
+        </div>                                      
+    </div>
+
+  </main>
+
+  <!-- footer -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <div>
+        <h4>Vansh's Portfolio</h4>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/ag-vansh/" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:vanshagbly6@gmail.com">
+          <i class="fas fa-envelope"></i> vanshagbly6@gmail.com
+        </a>
+        <a href="tel:+916396081309">
+          <i class="fas fa-phone"></i> +91 6396081309
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    const typed = new Typed('#typed-role', {
+      strings: ['Data Analyst', 'IoT Enthusiast', 'AI Developer'],
+      typeSpeed: 80,
+      backSpeed: 40,
+      loop: true
+    });
+    document.querySelectorAll('nav a[data-target]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = this.getAttribute('data-target');
+        const el = document.querySelector(target);
+        if (!el) return;
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.setAttribute('tabindex', '-1');
+        el.focus({ preventScroll: true });
+        setTimeout(() => el.removeAttribute('tabindex'), 1000);
+      });
+    });
+  </script>
+</body>
+</html>
